@@ -42,7 +42,7 @@ h1{
 	width: 100%;
 	margin-bottom: 20px;
 }
-.Profile input[type="text"],input[type="password"],input[type="email"]
+.Profile input
 {
      border:none;
      border-bottom: 1px solid #fff;
@@ -59,7 +59,6 @@ h1{
  	height: 30px;
  	background: darkgrey;
  	color:#fff;
- 	font-size: 16px;
     border-radius: 20px;
  }
 .Profile input[type="submit"]:hover
