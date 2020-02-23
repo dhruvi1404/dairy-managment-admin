@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+    background: #304450;
+}
+.container {
+    max-width: 800px;
+}
+input[type=text], input[type=text]:focus {
+    color:rgb(8, 0, 0);
+    border: none;
+    background: rgb(181, 203, 204);
+    max-width: 800px;  
+}
+
+.todos li {
+    background: #32393d;
+   
+}
+.delete {
+    cursor: pointer;
+}
+
+/* filter class for script */
+.filtered{
+    display:none !important;
+}
+.mb-5{
+    color: rgb(213, 223, 224);
+
+}
+.mb-4{
+    color: white;
+}
+    </style>
+    <title>To Do</title>
+</head>
+<body>   
+    <div class="container">   <br> 
+         <h4><div id="date" class="mb-5"></div></h4>
+        <header class="text-center text-light my-4">
+            <h1 class="mb-4">To-Do List : ) </h1>         
+            <label>Search todos</label>            
+            <form class="search">
+                <input class="form-control m-auto" type="text" name="search" placeholder="Search todos" />
+            </form>           
+        </header>
+        <form class="add text-center my-4">       
+         <br>
+         <div class="add-to-do">           
+            <label class="text-light">Add a new todo...</label>
+            <div class="n">
+            <input id="input" class="form-control m-auto" type="text" name="add" placeholder="Add a to-do" />
+        </div>
+         </div>
+        </form>
+        <ul class="list-group todos mx-auto text-light">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Details about sellers</span>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Details about customers</span>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>resolve some issues</span>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Get details about local vendors</span>
+                <i class="far fa-trash-alt delete"></i>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const ul = document.querySelector('.todos');
+        const addForm = document.querySelector('.add');
+        const dateElement=document.getElementById("date");       
+        const options={weekday:"long",month:"short",day:"numeric"};
+        const today= new Date();
+        dateElement.innerHTML=today.toLocaleDateString("en-US",options);
+        const search = document.querySelector('.search input');      
+        const generateTemplate = todo => {
+            const html = `  <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>${todo}</span>
+            <i class="far fa-trash-alt delete"></i>
+            </li>`;        
+            ul.innerHTML += html;       
+        }             
+        //adding todo
+        addForm.addEventListener('submit', e => {
+            e.preventDefault();
+            // console.log("New todo added");        
+            const todo = addForm.add.value.trim();
+            if (todo.length) {
+                generateTemplate(todo);
+                addForm.reset(); //resetting input      
+            }
+        });        
+        //deleting todo
+        ul.addEventListener('click', e => {
+            if (e.target.classList.contains('delete')) {
+                e.target.parentElement.remove(); //removing parent li
+            }
+        });
+        //filtering todo
+        const filterTodo = (term) => {
+            //adding filter class to unmatched todo
+            Array.from(ul.children)
+                .filter((todo) => !todo.textContent.toLowerCase().includes(term))
+                .forEach(todo => todo.classList.add('filtered'));        
+            //removing filter class dynamically while user changes 'term'
+            Array.from(ul.children)
+                .filter((todo) => todo.textContent.toLowerCase().includes(term))
+                .forEach(todo => todo.classList.remove('filtered'));       
+        }       
+        //keyup event
+        search.addEventListener('keyup', e => {
+            const term = e.target.value.trim().toLowerCase();
+            filterTodo(term);
+        
+        })</script>
+</body>
+</html>
