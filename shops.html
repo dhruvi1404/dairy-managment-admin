@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shops search</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="				sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
+
+	<link rel="stylesheet" type="text/css" href="shops.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+		<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav id="sidebar" class="active">
+				<div class="sidebar-header">
+					<h3><a href="C:\Users\DELL\Desktop\New folder\Project\dashboard.html">Frezzmoo</a></h3>
+				</div>
+				<ul class="list-unstyled components">
+					<li class="active">
+					    <a href="#" class="">Profile</a>
+						</li>
+					<li>
+				    	<a href="#" class="">Users</a>
+					</li>
+					<li>
+					    <a href="C:\Users\DELL\Desktop\New folder\Project\employee.html" class="">Employee</a>
+					</li>
+					<li>
+				    	<a href="C:\Users\DELL\Desktop\New folder\Project\shops.html" class="">Shops</a>
+					</li>
+					<li>
+				    	<a href="#" class="">Products</a>
+					</li>
+					<li>
+				    	<a href="#" class="">Accounts</a>
+					</li>
+					<li>
+				    	<a href="#" class="">Notes</a>
+					</li>
+					<li>
+				    	<a href="#" class="">Feedback</a>
+					</li>
+        		</ul>
+			</nav>
+
+			<!-- Content navbar -->
+			<div id="content">	
+				<nav class="main-header navbar navbar-light navbar-expand bg-light">
+				
+					<div class="">
+	            		<button type="button" id="sidebarCollapse" class="btn btn-light">
+	                		<i class="fas fa-bars"> <svg class="bi bi-list" width="32" height="32" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.5 13.5A.5.5 0 015 13h10a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-4A.5.5 0 015 9h10a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-4A.5.5 0 015 5h10a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clip-rule="evenodd"/></svg> </i>
+	            		</button>
+
+	        		</div>
+						<a href="#" class="navbar-brand">Shops</a>
+				</nav>
+
+				<!-- MAPS AND SHOPS -->
+				<div class="main-content">
+					<div class="left-content col-md-6">
+						<div id="map"></div>
+					</div>
+					
+					<div class="right-content col-md-6">
+						<section>
+							<ul class="nav nav-tabs">
+								<li class="nav-item active">
+									<a href="#" class="nav-link">Shops</a>
+								</li>
+							</ul>
+							<div class="shop-list">
+								<div class="shop-items">
+									<a href="#" class="button-link">
+										<img class="shop-dp" src="https://ssl.gstatic.com/images/branding/product/1x/avatar_anonymous_square_512dp.png">
+										Name: Shop 1
+									</a>
+									<p class="panel">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+								<div class="shop-items">
+									<a href="#" class="button-link">
+										<img class="shop-dp" src="https://ssl.gstatic.com/images/branding/product/1x/avatar_anonymous_square_512dp.png">
+										Name: Shop 2
+									</a>
+									<p class="panel">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+								<div class="shop-items">
+									<a href="#" class="button-link">
+										<img class="shop-dp" src="https://ssl.gstatic.com/images/branding/product/1x/avatar_anonymous_square_512dp.png">
+										Name: Shop 3
+									</a>
+									<p class="panel">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+								<div class="shop-items">
+									<a href="#" class="button-link">
+										<img class="shop-dp" src="https://ssl.gstatic.com/images/branding/product/1x/avatar_anonymous_square_512dp.png">
+										Name: Shop 4
+									</a>
+									<p class="panel">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+								<div class="shop-items">
+									<a href="#" class="button-link">
+										<img class="shop-dp" src="https://ssl.gstatic.com/images/branding/product/1x/avatar_anonymous_square_512dp.png">
+										Name: Shop 5
+									</a>
+									<p class="panel">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+				$(document).ready(function () {
+ 	   				$('#sidebarCollapse').on('click', function () {
+ 	       				$('#sidebar').toggleClass('active');
+   				 	});
+				});
+
+				var acc=document.getElementsByClassName('button-link');
+
+				for(var i=0;i<acc.length;i++){
+					acc[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+
+						var panel= this.nextElementSibling;
+						if(panel.style.display === "block"){
+							panel.style.display = "none";
+						} else {
+							panel.style.display = "block";
+						}
+					});
+				}
+
+		</script>
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaeVHhvis0kCBQtQgz7vAbcl5urVIv2UU&callback=initMap"
+    async defer></script> -->
+    	<script type="text/javascript">
+
+    		var map = L.map('map').setView([23.0338,72.5466],15);
+
+    		L.tileLayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=vlhrKvnOUUxLsSlaGTPN', {
+    			attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'}).addTo(map);
+
+    		var shopmark = [[23.0336282,72.5418155],[23.0334897,72.5422614],[23.0324628,72.5427979],[23.0324628,72.5384205],[23.0318704,72.5358885]];
+    		for(var i=0; i<shopmark.length;i++){
+    			L.marker(shopmark[i]).addTo(map);
+    		}
+
+    	</script>
+</body>
+
+</html>

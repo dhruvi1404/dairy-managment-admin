@@ -1,0 +1,209 @@
+/*>>>>>>> SIDEBAR <<<<<<<*/
+.wrapper{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: stretch;
+}
+div #content{
+	width: 100%;
+}
+
+#sidebar{
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 100vh;
+
+	background: #EFEFF0;
+    color: black;
+    transition: all 0.3s;
+}
+
+#sidebar.active{
+	margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #EDEEEE;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: white;
+    background: #52606F;
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+a, a:hover, a:focus{
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+/*>>>>>>> END OF SIDEBAR <<<<<<<*/
+
+/*>>>>>>LOWER HALF<<<<<<*/
+
+.lower-half{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: baseline;
+}
+
+/*>>>>>>> GRIDS <<<<<<<*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.row .col-md-4 .col-xs-6{
+	padding-right: 20px;
+	padding-left: 20px;
+	width: 100%;
+	position: relative;
+}
+
+.small-box{
+	background-color: #1B717F !important;
+	border-radius: .5rem;
+	margin-bottom: 20px;
+	position: relative;
+	box-shadow: 0 10px 10px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+}
+
+.small-box > h3,p{
+	color: white;
+	padding: 5px 10px 10px 10px;
+}
+/*>>>>>>> END OF GRIDS <<<<<<<*/
+
+/*>>>>>>> TODO LIST <<<<<<<*/
+.card.card-success{
+	margin-left: 15px !important;
+	margin-right: 15px !important;
+	margin-bottom: 10px;
+	box-shadow: 0 10px 10px rgba(0,0,0,.125);
+}
+
+.card-success>.card-header{
+	background-color: #1B717F;
+	color: white;
+	box-shadow: 1px -1px 10px #0000003d;
+}
+
+.todo-list{
+	list-style: none;
+	padding: 0px;
+}
+
+.todo-list>li{
+	background-color: white;
+	padding-top: 5px;
+	border: #1B717F 1px solid;
+	border-radius: 0.25rem;
+	margin-bottom: 5px;
+	box-shadow: 0 10px 10px rgba(0,0,0,.125);
+}
+
+svg.checkbullet{
+	height: 22px;
+	width: 22px;
+}
+
+.icheck-primary{
+	display: inline !important;
+	margin-left: 0.5rem !important;
+}
+
+#todocheck{
+	opacity: 0;
+	position: absolute !important;
+
+}
+
+.checkicon{
+	width: 22px;
+	height: 22px;
+	border: grey 2px solid;
+	position: relative;
+	vertical-align: top;
+	border-radius: 0.3rem;
+}
+
+.icheck-primary>input:checked+label.checkicon{
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #fff;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQAfLarPoQEQ8twPmhEF1Xfs6xhUVVah5OO-7XuIABgfmsorcRd");
+    border-radius: 0.3rem;
+    border-color: white;
+    background-size: contain;
+}
+
+.todo-list>li .text{
+	font-weight: 600;
+	display: inline;
+	margin-left: 10px;
+}
+
+.todo-list>li.done .text {
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.todo-list>li .badge{
+	font-size: 0.7em;
+	margin-left: 15px;
+	display: inline;
+}
+
+.todo-list>li.done .badge {
+    background: #adb5bd!important;
+}
+
+/*>>>>>>> PIE CHART <<<<<<<*/
+.card.card-danger{
+	margin-top: 10px;
+	margin-left: 15px !important;
+	margin-right: 15px !important;
+	margin-bottom: 20px;
+	box-shadow: 0 10px 10px rgba(0,0,0,.125);
+}
+
+.card-danger>.card-header{
+	background-color: #1B717F;
+	color: white;
+	box-shadow: 1px -1px 10px #0000003d;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-danger>.card-body>canvas.doughnutChart{
+	width: 100%;
+	height: 10px;
+}

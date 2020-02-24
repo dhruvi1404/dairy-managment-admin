@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="				sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
+
+	<link rel="stylesheet" type="text/css" href="dashboard.css">
+
+</head>
+<body>
+
+		<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav id="sidebar" class="active">
+				<div class="sidebar-header">
+					<h3><a href="C:\Users\DELL\Desktop\New folder\Project\dashboard.html">Frezzmoo</a></h3>
+				</div>
+				<ul class="list-unstyled components">
+					<li class="active">
+					    <a href="#" class="">Profile</a>
+						</li>
+					<li>
+				    	<a href="#" class="">Users</a>
+					</li>
+					<li>
+					    <a href="C:\Users\DELL\Desktop\New folder\Project\employee.html" class="">Employee</a>
+					</li>
+					<li>
+				    	<a href="C:\Users\DELL\Desktop\New folder\Project\shops.html" class="">Shops</a>
+					</li>
+					<li>
+				    	<a href="#" class="">Products</a>
+					</li>
+					<li>
+				    	<a href="#" class="">Accounts</a>
+					</li>
+					<li>
+				    	<a href="#" class="">Notes</a>
+					</li>
+					<li>
+				    	<a href="#" class="">Feedback</a>
+					</li>
+        		</ul>
+			</nav>
+
+			<!-- Content navbar -->
+			<div id="content">	
+				<nav class="main-header navbar navbar-light navbar-expand bg-light">
+				
+					<div class="">
+	            		<button type="button" id="sidebarCollapse" class="btn btn-light">
+	                		<i class="fas fa-bars"> <svg class="bi bi-list" width="32" height="32" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.5 13.5A.5.5 0 015 13h10a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-4A.5.5 0 015 9h10a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-4A.5.5 0 015 5h10a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clip-rule="evenodd"/></svg> </i>
+	            		</button>
+
+	        		</div>
+					<a href="#" class="navbar-brand">Dashboard</a>
+				</nav>
+
+				<!-- Grid -->
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<!-- Smallbox -->
+						<div class="small-box bg-info">
+							<p>Heading</p>
+							<h3>Value</h3>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<!-- Smallbox -->
+						<div class="small-box bg-info">
+							<p>Heading</p>
+							<h3>Value</h3>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<!-- Smallbox -->
+						<div class="small-box bg-info">
+							<p>Heading</p>
+							<h3>Value</h3>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<!-- Smallbox -->
+						<div class="small-box bg-info">
+							<p>Heading</p>
+							<h3>Value</h3>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<!-- Smallbox -->
+						<div class="small-box bg-info">
+							<p>Heading</p>
+							<h3>Value</h3>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<!-- Smallbox -->
+						<div class="small-box bg-info">
+							<p>Heading</p>
+							<h3>Value</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- To do and Piechart -->
+				<div class="lower-half">
+					<div class="card card-success">
+						<div class="card-header">
+							<h3 class="card-title">
+								<i class="">
+									<!-- icon goes here -->
+									<svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M7 13.5a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9a.5.5 0 01-.5-.5zm0-4a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9a.5.5 0 01-.5-.5zm0-4a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9a.5.5 0 01-.5-.5zM5.854 4.146a.5.5 0 010 .708l-1.5 1.5a.5.5 0 01-.708 0l-.5-.5a.5.5 0 11.708-.708L4 5.293l1.146-1.147a.5.5 0 01.708 0zm0 4a.5.5 0 010 .708l-1.5 1.5a.5.5 0 01-.708 0l-.5-.5a.5.5 0 11.708-.708L4 9.293l1.146-1.147a.5.5 0 01.708 0zm0 4a.5.5 0 010 .708l-1.5 1.5a.5.5 0 01-.708 0l-.5-.5a.5.5 0 01.708-.708l.146.147 1.146-1.147a.5.5 0 01.708 0z" clip-rule="evenodd">
+										</path>
+									</svg>
+								</i>
+								<span>To-Do-List</span>
+							</h3>
+						</div>
+						<div class="card-body">
+							<ul class="todo-list" data-widget="todo-list">
+								<li id="todo-li" class="">
+									<!-- icon -->
+									<span>
+										<svg class="bi bi-check-box checkbullet" width="1em" height="1em" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+ 											 <path fill-rule="evenodd" d="M17.354 4.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L10 11.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd">
+ 											 </path>
+ 											 <path fill-rule="evenodd" d="M3.5 15A1.5 1.5 0 005 16.5h10a1.5 1.5 0 001.5-1.5v-5a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h8a.5.5 0 000-1H5A1.5 1.5 0 003.5 5v10z" clip-rule="evenodd">
+ 											 </path>
+										</svg>
+									</span>
+									<!-- checkbox -->
+									<div class="icheck-primary">
+										<input type="checkbox" name="" id="todocheck">
+										<label for="todocheck" id="checkicon" class="checkicon">
+										</label>
+									</div>
+									<!-- Task text -->
+									<span class="text">
+										Task 1
+									</span>
+									<small class="badge badge-success">
+										<svg class="bi bi-clock" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg">
+										  <path fill-rule="evenodd" d="M10 17a7 7 0 100-14 7 7 0 000 14zm8-7a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"></path>
+										  <path fill-rule="evenodd" d="M10 4a.5.5 0 01.5.5V10a.5.5 0 01-.5.5H5.5a.5.5 0 010-1h4v-5A.5.5 0 0110 4z" clip-rule="evenodd"></path>
+										</svg>
+										1 day
+									</small>
+								</li>
+								<li id="todo-li" class="">
+									<!-- icon -->
+									<span>
+										<svg class="bi bi-check-box checkbullet" width="1em" height="1em" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+ 											 <path fill-rule="evenodd" d="M17.354 4.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L10 11.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd">
+ 											 </path>
+ 											 <path fill-rule="evenodd" d="M3.5 15A1.5 1.5 0 005 16.5h10a1.5 1.5 0 001.5-1.5v-5a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h8a.5.5 0 000-1H5A1.5 1.5 0 003.5 5v10z" clip-rule="evenodd">
+ 											 </path>
+										</svg>
+									</span>
+									<!-- checkbox -->
+									<div class="icheck-primary">
+										<input type="checkbox" name="" id="todocheck">
+										<label for="todocheck" id="checkicon" class="checkicon">
+										</label>
+									</div>
+									<!-- Task text -->
+									<span class="text">
+										Task 1
+									</span>
+									<small class="badge badge-success">
+										<svg class="bi bi-clock" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg">
+										  <path fill-rule="evenodd" d="M10 17a7 7 0 100-14 7 7 0 000 14zm8-7a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"></path>
+										  <path fill-rule="evenodd" d="M10 4a.5.5 0 01.5.5V10a.5.5 0 01-.5.5H5.5a.5.5 0 010-1h4v-5A.5.5 0 0110 4z" clip-rule="evenodd"></path>
+										</svg>
+										1 day
+									</small>
+								</li>
+								<li id="todo-li" class="">
+									<!-- icon -->
+									<span>
+										<svg class="bi bi-check-box checkbullet" width="1em" height="1em" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+ 											 <path fill-rule="evenodd" d="M17.354 4.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L10 11.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd">
+ 											 </path>
+ 											 <path fill-rule="evenodd" d="M3.5 15A1.5 1.5 0 005 16.5h10a1.5 1.5 0 001.5-1.5v-5a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h8a.5.5 0 000-1H5A1.5 1.5 0 003.5 5v10z" clip-rule="evenodd">
+ 											 </path>
+										</svg>
+									</span>
+									<!-- checkbox -->
+									<div class="icheck-primary">
+										<input type="checkbox" name="" id="todocheck">
+										<label for="todocheck" id="checkicon" class="checkicon">
+										</label>
+									</div>
+									<!-- Task text -->
+									<span class="text">
+										Task 1
+									</span>
+									<small class="badge badge-success">
+										<svg class="bi bi-clock" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg">
+										  <path fill-rule="evenodd" d="M10 17a7 7 0 100-14 7 7 0 000 14zm8-7a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"></path>
+										  <path fill-rule="evenodd" d="M10 4a.5.5 0 01.5.5V10a.5.5 0 01-.5.5H5.5a.5.5 0 010-1h4v-5A.5.5 0 0110 4z" clip-rule="evenodd"></path>
+										</svg>
+										1 day
+									</small>
+								</li>
+								<li id="todo-li" class="">
+									<!-- icon -->
+									<span>
+										<svg class="bi bi-check-box checkbullet" width="1em" height="1em" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+ 											 <path fill-rule="evenodd" d="M17.354 4.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L10 11.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd">
+ 											 </path>
+ 											 <path fill-rule="evenodd" d="M3.5 15A1.5 1.5 0 005 16.5h10a1.5 1.5 0 001.5-1.5v-5a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h8a.5.5 0 000-1H5A1.5 1.5 0 003.5 5v10z" clip-rule="evenodd">
+ 											 </path>
+										</svg>
+									</span>
+									<!-- checkbox -->
+									<div class="icheck-primary">
+										<input type="checkbox" name="" id="todocheck">
+										<label for="todocheck" id="checkicon" class="checkicon">
+										</label>
+									</div>
+									<!-- Task text -->
+									<span class="text">
+										Task 1
+									</span>
+									<small class="badge badge-success">
+										<svg class="bi bi-clock" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg">
+										  <path fill-rule="evenodd" d="M10 17a7 7 0 100-14 7 7 0 000 14zm8-7a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"></path>
+										  <path fill-rule="evenodd" d="M10 4a.5.5 0 01.5.5V10a.5.5 0 01-.5.5H5.5a.5.5 0 010-1h4v-5A.5.5 0 0110 4z" clip-rule="evenodd"></path>
+										</svg>
+										1 day
+									</small>
+								</li>
+								<li id="todo-li" class="">
+									<!-- icon -->
+									<span>
+										<svg class="bi bi-check-box checkbullet" width="1em" height="1em" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+ 											 <path fill-rule="evenodd" d="M17.354 4.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L10 11.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd">
+ 											 </path>
+ 											 <path fill-rule="evenodd" d="M3.5 15A1.5 1.5 0 005 16.5h10a1.5 1.5 0 001.5-1.5v-5a.5.5 0 00-1 0v5a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V5a.5.5 0 01.5-.5h8a.5.5 0 000-1H5A1.5 1.5 0 003.5 5v10z" clip-rule="evenodd">
+ 											 </path>
+										</svg>
+									</span>
+									<!-- checkbox -->
+									<div class="icheck-primary">
+										<input type="checkbox" name="" id="todocheck" checked>
+										<label for="todocheck" id="checkicon" class="checkicon">
+										</label>
+									</div>
+									<!-- Task text -->
+									<span class="text">
+										Task 1
+									</span>
+									<small class="badge badge-success">
+										<svg class="bi bi-clock" width="1.5em" height="1.5em" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg">
+										  <path fill-rule="evenodd" d="M10 17a7 7 0 100-14 7 7 0 000 14zm8-7a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"></path>
+										  <path fill-rule="evenodd" d="M10 4a.5.5 0 01.5.5V10a.5.5 0 01-.5.5H5.5a.5.5 0 010-1h4v-5A.5.5 0 0110 4z" clip-rule="evenodd"></path>
+										</svg>
+										1 day
+									</small>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card card-danger">
+						<div class="card-header">
+
+							<h3 class="card-title">
+								<i>
+									<svg class="bi bi-pie-chart" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" d="M10 17a7 7 0 100-14 7 7 0 000 14zm0 1a8 8 0 100-16 8 8 0 000 16z" clip-rule="evenodd">
+										</path>
+  										<path fill-rule="evenodd" d="M9.5 9.793V3h1v6.5H17v1h-6.793l-4.853 4.854-.708-.708L9.5 9.793z" clip-rule="evenodd">
+  										</path>
+									</svg>
+								</i>
+								<span>Pie Chart</span>
+							</h3>
+						</div>
+						<div class="card-body">
+							<canvas id="doughnutChart"></canvas>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<script type="text/javascript">
+				$(document).ready(function () {
+ 	   				$('#sidebarCollapse').on('click', function () {
+ 	       				$('#sidebar').toggleClass('active');
+   				 	});
+				});
+
+				$('#checkicon').click(function () {
+					$(this).parent().toggleClass('done');
+				});
+
+				//doughnut
+					var ctxD = document.getElementById("doughnutChart").getContext('2d');
+					var myLineChart = new Chart(ctxD, {
+					type: 'doughnut',
+					data: {
+					labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+					datasets: [{
+					data: [300, 50, 100, 40, 120],
+					backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+					hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+					}]
+					},
+					options: {
+					responsive: true
+					}
+					});
+				// endofpiechart
+		</script>
+</body>
+</html>
