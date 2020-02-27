@@ -1,0 +1,90 @@
+table{
+
+		border-collapse: collapse;
+		width: 100%;
+		font-family: arial,sans-sarif;
+	}
+	
+	td,th{
+    
+       border:1px solid #CCCCCC;
+       padding: 10px;
+}
+th{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+tr:nth-child(even)
+{
+	background-color: #dddddd;
+}
+tr:nth-child(){
+     tr:hover{
+	  background:rgba(0,0,0,0.7);
+	  color:white;
+	}
+}
+
+
+/*>>>>>>> SIDEBAR <<<<<<<*/
+.wrapper{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: stretch;
+	background-color: rgba(239,239,240, 0.65);
+}
+div #content{
+	width: 100%;
+}
+
+#sidebar{
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 100vh;
+
+	background: #EFEFF0;
+    color: black;
+    transition: all 0.3s;
+}
+
+#sidebar.active{
+	margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #EDEEEE;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: black;
+    background: rgba(23,162,184,0.375);
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+a, a:hover, a:focus{
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
